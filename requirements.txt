@@ -1,0 +1,5 @@
+# ComfyUI supplies torch, numpy, Pillow, aiohttp and the node runtime.
+psutil>=5.9
+python-docx>=1.1
+scipy>=1.10
+av>=12

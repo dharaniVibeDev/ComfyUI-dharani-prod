@@ -1,0 +1,12 @@
+[project]
+name = "comfyui-dharani-prod"
+version = "0.1.0"
+description = "ComfyUI tools for hardware monitoring, timing, shot revisions, reference browsing, prompt archives and local voice workflows."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Dharanidharan K" }]
+dependencies = ["psutil>=5.9", "python-docx>=1.1", "scipy>=1.10", "av>=12"]
+
+[project.urls]
+Repository = "https://github.com/dharaniVibeDev/ComfyUI-dharani-prod"
+

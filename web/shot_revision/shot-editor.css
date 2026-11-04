@@ -1,0 +1,80 @@
+.vse-dialog {
+  position: fixed; inset: 16px; margin: 0; padding: 0;
+  width: calc(100vw - 32px); height: calc(100dvh - 32px);
+  max-width: none; max-height: none; overflow: hidden;
+  color-scheme: dark; color: #e8ecec; background: #202628;
+  border: 1px solid #465052; border-radius: 10px;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 55%);
+  font: 13px/1.5 'Segoe UI', system-ui, sans-serif;
+  grid-template: 64px minmax(0, 1fr) 48px / 76px minmax(0, 1fr) 252px;
+}
+.vse-dialog[open] { display: grid; }
+.vse-dialog:not([open]) { display: none; }
+.vse-dialog::backdrop { background: rgb(7 10 12 / 72%); }
+.vse-dialog * { box-sizing: border-box; }
+.vse-dialog ::selection { color: #111a0b; background: #b7ed72; }
+.vse-dialog button {
+  min-height: 34px; padding: 6px 14px; border: 1px solid #4a5557; border-radius: 5px;
+  background: #303a3d; color: #e8ecec; font: inherit; cursor: pointer; white-space: nowrap;
+}
+.vse-dialog button:hover { background: #3b484b; border-color: #809194; }
+.vse-dialog button:active { background: #253034; }
+.vse-dialog button:disabled { cursor: default; opacity: .4; }
+.vse-dialog button:focus-visible, .vse-dialog input:focus-visible, .vse-stage:focus-visible {
+  outline: 2px solid #b7ed72; outline-offset: 3px;
+}
+.vse-dialog .vse-primary { color: #16200d; background: #b7ed72; border-color: #b7ed72; font-weight: 650; }
+.vse-dialog .vse-primary:hover { background: #cef3a1; }
+.vse-header {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 10px;
+  padding: 0 20px; border-bottom: 1px solid #3a4446; background: #252e31;
+}
+.vse-heading { display: flex; align-items: baseline; gap: 16px; margin-right: auto; min-width: 0; }
+.vse-heading strong { font-size: 15px; font-weight: 650; }
+.vse-heading span { color: #b3c0c2; font-size: 12px; font-variant-numeric: tabular-nums; }
+.vse-rail { display: flex; flex-direction: column; gap: 8px; padding: 12px 8px; border-right: 1px solid #3a4446; }
+.vse-dialog .vse-tool { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-height: 64px; padding: 7px 2px; border-color: transparent; background: transparent; font-size: 10px; }
+.vse-tool svg { width: 23px; height: 23px; flex-shrink: 0; }
+.vse-dialog .vse-tool[aria-pressed='true'] { color: #d7f2b7; background: #34432d; border-color: #7aa64b; }
+.vse-stage {
+  position: relative; min-width: 0; min-height: 0; overflow: hidden; outline-offset: -3px !important;
+  background-color: #13191b;
+  background-image: conic-gradient(#1b2326 25%, transparent 0 50%, #1b2326 0 75%, transparent 0);
+  background-size: 24px 24px;
+}
+.vse-stage > .vse-view { display: block; position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; }
+.vse-inspector { display: flex; flex-direction: column; align-items: stretch; gap: 20px; padding: 24px 20px; min-width: 0; overflow-y: auto; border-left: 1px solid #3a4446; scrollbar-width: thin; scrollbar-color: #526266 #202628; }
+.vse-inspector h2 { margin: 0; font-size: 15px; line-height: 1.3; font-weight: 650; }
+.vse-help { min-height: 76px; margin: -8px 0 0; color: #bdc9cb; font-size: 12px; line-height: 1.6; }
+.vse-field { display: grid; gap: 10px; margin: 0; color: #d8e0e1; font-size: 12px; }
+.vse-field input[type='range'] { width: 100%; margin: 0; accent-color: #b7ed72; }
+.vse-field output { color: #b7c6c8; font-variant-numeric: tabular-nums; }
+.vse-pair { display: flex; gap: 8px; }
+.vse-pair button { flex: 1; min-width: 0; }
+.vse-guide { margin-top: auto; padding-top: 24px; color: #bdc9cb; border-top: 1px solid #3a4446; font-size: 12px; }
+.vse-guide strong { color: #e8ecec; font-weight: 600; }
+.vse-guide p { margin: 10px 0 0; line-height: 1.65; }
+.vse-footer { grid-column: 1 / -1; display: flex; align-items: center; gap: 8px; padding: 0 16px; border-top: 1px solid #3a4446; background: #252e31; }
+.vse-status { margin-right: auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #bdc9cb; font-size: 12px; }
+.vse-zoom { min-width: 56px; text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.vse-footer button { min-height: 28px; padding: 3px 10px; }
+@media (max-width: 1000px) {
+  .vse-dialog { inset: 8px; width: calc(100vw - 16px); height: calc(100dvh - 16px); grid-template-columns: 64px minmax(0, 1fr) 220px; }
+  .vse-inspector { padding: 20px 16px; gap: 16px; }
+}
+@media (max-width: 720px) {
+  .vse-dialog { inset: 0; width: 100vw; height: 100dvh; border: 0; border-radius: 0; grid-template: 56px minmax(0, 1fr) 112px 44px / 60px minmax(0, 1fr); }
+  .vse-header { padding: 0 12px; }
+  .vse-heading { gap: 0; flex-direction: column; }
+  .vse-heading strong { font-size: 13px; }
+  .vse-heading span { font-size: 10px; }
+  .vse-header button { padding: 6px 9px; font-size: 12px; }
+  .vse-rail { grid-row: 2; }
+  .vse-stage { grid-row: 2; }
+  .vse-inspector { grid-row: 3; grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; padding: 12px; border-left: 0; border-top: 1px solid #3a4446; }
+  .vse-inspector h2, .vse-help, .vse-guide { display: none; }
+  .vse-field { gap: 5px; }
+  .vse-field output { display: none; }
+  .vse-footer { grid-row: 4; gap: 4px; padding: 0 8px; }
+  .vse-status { font-size: 11px; }
+}

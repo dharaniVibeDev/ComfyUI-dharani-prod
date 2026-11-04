@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "node_packs": [
+    {
+      "folder": "comfyui-controlnet-aux",
+      "url": "https://github.com/comfyorg/comfyui-controlnet-aux.git",
+      "revision": "83463c2e4b04e729268e57f638b4212e0da4badc"
+    },
+    {
+      "folder": "comfyui-krea2-ostris-edit",
+      "url": "https://github.com/ostris/ComfyUI-Krea2-Ostris-Edit.git",
+      "revision": "7756566160c4a1b24bb1bd9f0ff3ced1a83d7547"
+    },
+    {
+      "folder": "comfyui-krea2-controlnet",
+      "url": "https://github.com/facok/comfyui-krea2-controlnet.git",
+      "revision": "79ebfd3bd80d2180b334dd7ce57f3c9ddaa0848f"
+    },
+    {
+      "folder": "ComfyUI-NK2E",
+      "url": "https://github.com/Nynxz/ComfyUI-NK2E.git",
+      "revision": "ea321e1603e019f90971c743adce17146756fdac"
+    },
+    {
+      "folder": "rgthree-comfy",
+      "url": "https://github.com/rgthree/rgthree-comfy.git",
+      "revision": "55ee1c7b26a47ba3db58bf6c94f649c776c66d33"
+    }
+  ],
+  "models": [
+    {
+      "repo": "thedeoxen/Krea-2-pose-controlnet",
+      "filename": "krea2_turbo_openpose_controlnet.safetensors",
+      "revision": "1da9762ca46e6c9e4014b309bf0147889f10982a",
+      "destination": "models/loras/Krea2/krea2_turbo_openpose_controlnet.safetensors",
+      "bytes": 228587504,
+      "sha256": "0ddc3aafce4abdf7af3309b2f00c1bacdf15df1f2b4fb7adc9ff71795da90ecf",
+      "license": "apache-2.0"
+    },
+    {
+      "repo": "Patil/Krea-2-depth-controlnet",
+      "filename": "depth-control-lora.safetensors",
+      "revision": "21889413aa7282a6e78bd510247cceccad034b24",
+      "destination": "models/loras/Krea2/depth-control-lora.safetensors",
+      "bytes": 861995928,
+      "sha256": "fb80547ed79b47c1e3fea7bb9d36297e3917b2115fab6700ca1501350f9f483c",
+      "license": "other"
+    },
+    {
+      "repo": "nynxz/NK2E",
+      "filename": "comfy/canny_v0.1/NK2E-canny-v0.1.safetensors",
+      "revision": "bfaa0a77c79669508915a953f0cecb103d95f970",
+      "destination": "models/loras/Krea2/NK2E-canny-v0.1.safetensors",
+      "bytes": 192742712,
+      "sha256": "5a0a32ee35d0c7d1a3aa2627946b5e225dab1f53d41274daf87020bbc8d30041",
+      "license": "other"
+    },
+    {
+      "repo": "Cierpliwy/krea2_lineart_edit",
+      "filename": "krea2_lineart_coarse_edit_v1.safetensors",
+      "revision": "0ae0d9f7e8fedade046be164dd1da1cf3d164714",
+      "destination": "models/loras/Krea2/krea2_lineart_coarse_edit_v1.safetensors",
+      "bytes": 457111992,
+      "sha256": "e3f1f33e559bf9ae6c4c737ffa98c23a7035c0da55063120f6e52237f2d94303",
+      "license": "other"
+    },
+    {
+      "repo": "depth-anything/Depth-Anything-V2-Small",
+      "filename": "depth_anything_v2_vits.pth",
+      "revision": "03876f8651c73a60fe4c2c48294e09fcb6838fcf",
+      "destination": "custom_nodes/comfyui-controlnet-aux/ckpts/depth-anything/Depth-Anything-V2-Small/depth_anything_v2_vits.pth",
+      "bytes": 99218434,
+      "sha256": "715fade13be8f229f8a70cc02066f656f2423a59effd0579197bbf57860e1378",
+      "license": "apache-2.0"
+    },
+    {
+      "repo": "hr16/yolox-onnx",
+      "filename": "yolox_l.torchscript.pt",
+      "revision": "a124b32c3b7c5cebda1c7cd96178f0f9d2050125",
+      "destination": "custom_nodes/comfyui-controlnet-aux/ckpts/hr16/yolox-onnx/yolox_l.torchscript.pt",
+      "bytes": 217697649,
+      "sha256": "80bc14b13c260c24b3014cd42c02994bf52296ab8fa2d80a60b6afe08c93ef42",
+      "license": "apache-2.0"
+    },
+    {
+      "repo": "hr16/DWPose-TorchScript-BatchSize5",
+      "filename": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "revision": "359d662a9b33b73f6d0f21732baf8845f17bb4be",
+      "destination": "custom_nodes/comfyui-controlnet-aux/ckpts/hr16/DWPose-TorchScript-BatchSize5/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "bytes": 135059124,
+      "sha256": "d86a0b2b59fddc0901a7076e9f59c9f8602602133ed72511c693fd11eea23d91",
+      "license": "apache-2.0"
+    },
+    {
+      "repo": "lllyasviel/Annotators",
+      "filename": "sk_model.pth",
+      "revision": "982e7edaec38759d914a963c48c4726685de7d96",
+      "destination": "custom_nodes/comfyui-controlnet-aux/ckpts/lllyasviel/Annotators/sk_model.pth",
+      "bytes": 17173511,
+      "sha256": "c686ced2a666b4850b4bb6ccf0748031c3eda9f822de73a34b8979970d90f0c6",
+      "license": "other"
+    },
+    {
+      "repo": "lllyasviel/Annotators",
+      "filename": "sk_model2.pth",
+      "revision": "982e7edaec38759d914a963c48c4726685de7d96",
+      "destination": "custom_nodes/comfyui-controlnet-aux/ckpts/lllyasviel/Annotators/sk_model2.pth",
+      "bytes": 17173511,
+      "sha256": "30a534781061f34e83bb9406b4335da4ff2616c95d22a585c1245aa8363e74e0",
+      "license": "other"
+    }
+  ],
+  "base_models": "Not bundled or automatically downloaded; select compatible native Krea 2 Turbo, vision text encoder and Qwen-image VAE."
+}
